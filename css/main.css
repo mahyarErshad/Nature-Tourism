@@ -40,3 +40,7 @@ header {
   backface-visibility: hidden;
   animation: moveLeft 0.5s ease-out;
 }
+
+.header-wrapper .btn {
+  transform: translateY(3.75rem);
+}
