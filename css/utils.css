@@ -1,3 +1,5 @@
+/* Colors */
+
 :root {
   --Light: #7ed56f;
   --Medium: #55c57a;
@@ -5,20 +7,11 @@
   --gray: #777;
 }
 
+/* CSS Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-.flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.flex-col {
-  flex-direction: column;
 }
 
 body {
@@ -30,6 +23,19 @@ body {
   padding: 1.875rem;
 }
 
+/* Util Classes */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+/* Button */
+
 .btn:link,
 .btn:visited {
   text-decoration: none;
@@ -38,6 +44,7 @@ body {
   transition: all 0.3s;
   font-weight: 600;
   border-radius: 6.25rem;
+  position: relative;
 }
 
 .btn-white {
@@ -53,4 +60,27 @@ body {
 .btn:active {
   transform: translateY(0.0625rem);
   box-shadow: 0 0.3125rem 0.625rem rgba(0, 0, 0, 0.2);
+}
+
+.btn::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 6.25rem;
+}
+
+.btn-white::after {
+  content: "";
+  background-color: #fff;
+}
+
+.btn:hover::after {
+  transition: all 0.4s;
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
 }
