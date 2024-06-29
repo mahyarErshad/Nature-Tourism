@@ -1,0 +1,11 @@
+{
+  "name": "nature-tourism",
+  "version": "1.0.0",
+  "description": "A modern website designed for tourism purposes, created using only HTML and CSS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mahyar Ershad",
+  "license": "ISC"
+}
