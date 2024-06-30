@@ -1,0 +1,38 @@
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba($light, 0.8), rgba($dark, 0.8)), url("../img/hero.jpg");
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative;
+  text-transform: uppercase;
+  color: $white;
+  &-logo {
+    position: absolute;
+    height: 2.1875rem;
+    top: 2.5rem;
+    left: 2.5rem;
+  }
+  &-wrapper {
+    flex-direction: column;
+    transform: translateY(-60%);
+    backface-visibility: hidden;
+    h1 {
+      backface-visibility: hidden;
+      font-size: 3.75rem;
+      font-weight: 500;
+      letter-spacing: 2.1875rem;
+      animation: moveRight 0.5s ease-out;
+    }
+    h2 {
+      font-size: 1.25rem;
+      letter-spacing: 0.5rem;
+      font-weight: 700;
+      backface-visibility: hidden;
+      animation: moveLeft 0.5s ease-out;
+    }
+    .btn {
+      transform: translateY(3.75rem);
+    }
+  }
+}

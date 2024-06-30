@@ -4,7 +4,7 @@
   "description": "A modern website designed for tourism purposes, created using only HTML and CSS.",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch sass/main.scss css/main.css"
+    "sass": "sass --watch sass/base/main.scss css/main.css"
   },
   "author": "Mahyar Ershad",
   "license": "ISC",
