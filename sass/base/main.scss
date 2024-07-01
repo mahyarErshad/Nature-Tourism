@@ -3,4 +3,25 @@
 @import "../components/header.scss";
 @import "../components/button.scss";
 @import "../utils/animation.scss";
-@import "../components/about.scss";
+
+.about {
+  background-color: $light-gray;
+  padding: 25rem 0;
+  margin-top: -20vh;
+  gap: 5rem;
+  h2 {
+    font-size: 2.1875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-image: linear-gradient(to right, $light, $dark);
+    display: inline-block;
+    background-clip: text;
+    color: transparent;
+    transition: all 0.2s;
+    letter-spacing: 0.125rem;
+    &:hover {
+      transform: skewX(15deg) skewY(2deg) scale(1.1);
+      text-shadow: 0.5rem 1rem 2rem rgba($black, 0.2);
+    }
+  }
+}
