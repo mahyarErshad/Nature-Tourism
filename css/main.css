@@ -109,6 +109,29 @@ body {
   animation-fill-mode: backwards;
 }
 
+.secondary-btn:link, .secondary-btn:visited {
+  color: #28b485;
+  border-bottom: 1px solid #28b485;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.5rem;
+  max-width: fit-content;
+  transition: all 0.3s;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 0.2rem;
+}
+.secondary-btn:hover {
+  background-color: #28b485;
+  color: #fff;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  transform: translateY(-0.125rem);
+}
+.secondary-btn:active {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  transform: translateY(0);
+}
+
 @keyframes moveRight {
   0% {
     opacity: 0;

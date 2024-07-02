@@ -50,3 +50,29 @@
     animation-fill-mode: backwards;
   }
 }
+
+.secondary-btn {
+  &:link,
+  &:visited {
+    color: $dark;
+    border-bottom: 1px solid $dark;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.5rem;
+    max-width: fit-content;
+    transition: all 0.3s;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 0.2rem;
+  }
+  &:hover {
+    background-color: $dark;
+    color: $white;
+    box-shadow: 0 1rem 2rem rgba($black, 0.2);
+    transform: translateY(-0.125rem);
+  }
+  &:active {
+    box-shadow: 0 0.5rem 1rem rgba($black, 0.2);
+    transform: translateY(0);
+  }
+}
