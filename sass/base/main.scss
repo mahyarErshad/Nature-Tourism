@@ -24,4 +24,23 @@
       text-shadow: 0.5rem 1rem 2rem rgba($black, 0.2);
     }
   }
+  &-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    &__description {
+      font-size: 1rem;
+      max-width: 37.5rem;
+      &:not(:last-child) {
+        margin-bottom: 1.875rem;
+      }
+      h3 {
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+      }
+      p {
+        color: $black;
+      }
+    }
+  }
 }

@@ -20,6 +20,7 @@ body {
 }
 
 .flex-col {
+  display: flex;
   flex-direction: column;
 }
 
@@ -164,6 +165,25 @@ body {
 .about h2:hover {
   transform: skewX(15deg) skewY(2deg) scale(1.1);
   text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.about-container__description {
+  font-size: 1rem;
+  max-width: 37.5rem;
+}
+.about-container__description:not(:last-child) {
+  margin-bottom: 1.875rem;
+}
+.about-container__description h3 {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+.about-container__description p {
+  color: #000;
 }
 
 /*# sourceMappingURL=main.css.map */
