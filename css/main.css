@@ -214,4 +214,38 @@ body {
   margin-bottom: 1.875rem;
 }
 
+.composition {
+  position: relative;
+}
+.composition_photo {
+  max-width: 55%;
+  border-radius: 2px;
+  box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.4);
+  position: absolute;
+  transition: transform 0.3s, box-shadow 0.3s;
+  z-index: 10;
+  outline-offset: 1.25rem;
+}
+.composition_photo:hover {
+  z-index: 20;
+  transform: scale(1.05) translateY(0.3125rem);
+  box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.5);
+  outline: 0.9375rem solid #28b485;
+}
+.composition_photo--p1 {
+  top: -1.25rem;
+  left: 0;
+}
+.composition_photo--p2 {
+  top: 1.25rem;
+  right: 0;
+}
+.composition_photo--p3 {
+  top: 6.25rem;
+  left: 20%;
+}
+.composition:hover .composition_photo:not(:hover) {
+  transform: scale(0.9);
+}
+
 /*# sourceMappingURL=main.css.map */
