@@ -192,8 +192,10 @@ body {
 .about-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
 }
 .about-container__description {
+  align-self: flex-end;
   font-size: 1rem;
   max-width: 37.5rem;
 }
@@ -207,6 +209,9 @@ body {
 }
 .about-container__description p {
   color: #000;
+}
+.about-container:last-child p {
+  margin-bottom: 1.875rem;
 }
 
 /*# sourceMappingURL=main.css.map */
