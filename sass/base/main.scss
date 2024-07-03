@@ -4,3 +4,56 @@
 @import "../components/button.scss";
 @import "../utils/animation.scss";
 @import "../components/about.scss";
+
+.features {
+  padding: 12.5rem 0;
+  background-image: linear-gradient(to right bottom, rgba($light, 0.8), rgba($dark, 0.8)), url("/img/nat-4.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: skewY(-7deg);
+  margin-top: -6.25rem;
+
+  &_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  & > * {
+    transform: skewY(7deg);
+  }
+}
+
+.features_box {
+  max-width: 25%;
+  background-color: rgba($white, 0.8);
+  font-size: 0.9375rem;
+  padding: 1.5625rem;
+  text-align: center;
+  border-radius: 0.1875rem;
+  box-shadow: 0 0.9375rem 4rem rgba($black, 0.15);
+  transition: all 0.3s;
+  max-width: 17.5rem;
+
+  &--icon {
+    font-size: 3.75rem;
+    margin-bottom: 1rem;
+    background-image: linear-gradient(to right, $light, $dark);
+    display: inline-block;
+    background-clip: text;
+    color: transparent;
+  }
+
+  h3 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: rgba($black, 0.8);
+    text-transform: uppercase;
+  }
+
+  &:hover {
+    transform: translateY(-0.9375rem) scale(1.03);
+  }
+}
