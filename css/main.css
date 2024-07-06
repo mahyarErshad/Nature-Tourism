@@ -374,6 +374,7 @@ body {
   top: 7.5rem;
   right: 1.25rem;
   width: 75%;
+  text-transform: capitalize;
 }
 .card__side--front .card__title-span {
   padding: 1rem 1.5rem;
