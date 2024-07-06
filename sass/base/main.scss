@@ -13,11 +13,13 @@
   &_wrapper {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
     gap: 1.25rem;
   }
 }
 .card {
+  // Functionality
+
   perspective: 1500px;
   -moz-perspective: 1500px;
   position: relative;
@@ -47,9 +49,29 @@
     }
   }
   &:hover &__side--front {
-    transform: rotateY(180deg);
+    transform: rotateY(-180deg);
   }
   &:hover &__side--back {
     transform: rotateY(0deg);
+  }
+  &--1 {
+    grid-column: 2;
+  }
+  &--2 {
+    grid-column: 3;
+  }
+  &--3 {
+    grid-column: 4;
+  }
+}
+
+// Styling
+.card__side--front {
+  .card__image {
+    background-size: cover;
+    height: 14.375rem;
+    &-1 {
+      background-image: url(/img/nat-5.jpg);
+    }
   }
 }
