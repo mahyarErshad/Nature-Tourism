@@ -44,6 +44,14 @@
       background-color: $white;
     }
   }
+  &-green {
+    background-color: $dark;
+    color: $white;
+    &::after {
+      content: "";
+      background-color: $dark;
+    }
+  }
 
   &-moveBottom {
     animation: moveToBottom 0.3s ease-out 0.7s;
