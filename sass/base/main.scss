@@ -5,3 +5,47 @@
 @import "../utils/animation.scss";
 @import "../components/about.scss";
 @import "../components/features.scss";
+
+.section-tours {
+  background-color: $light-gray;
+  padding: 15.625rem 0;
+  margin-top: -6.25rem;
+  &_wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+}
+.card {
+  perspective: 1500px;
+  -moz-perspective: 1500px;
+  position: relative;
+  font-size: 30px;
+  color: $white;
+  position: relative;
+  height: 31.25rem;
+
+  &__side {
+    height: 31.25rem;
+    transition: all 0.5s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    &--front {
+      background-color: $white;
+    }
+    &--back {
+      background-color: green;
+      transform: rotateY(180deg);
+    }
+  }
+  &:hover &__side--front {
+    transform: rotateY(180deg);
+  }
+  &:hover &__side--back {
+    transform: rotateY(0deg);
+  }
+}
