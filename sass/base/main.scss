@@ -23,13 +23,11 @@
   perspective: 1500px;
   -moz-perspective: 1500px;
   position: relative;
-  font-size: 30px;
-  color: $white;
   position: relative;
-  height: 31.25rem;
+  height: 560px;
 
   &__side {
-    height: 31.25rem;
+    height: 560px;
     transition: all 0.5s ease;
     position: absolute;
     top: 0;
@@ -38,6 +36,7 @@
     backface-visibility: hidden;
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem rgba($black, 0.15);
+    overflow: hidden;
     &--front {
       background-color: $white;
     }
@@ -70,8 +69,45 @@
   .card__image {
     background-size: cover;
     height: 14.375rem;
+    background-blend-mode: screen;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     &-1 {
-      background-image: url(/img/nat-5.jpg);
+      background-image: url(/img/nat-5.jpg), linear-gradient(to bottom right, $orange-light, $orange-dark);
+    }
+  }
+  .card__title {
+    font-size: 1.75rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    color: $white;
+    position: absolute;
+    top: 7.5rem;
+    right: 1.25rem;
+    width: 75%;
+    &-span {
+      padding: 1rem 1.5rem;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+      &--1 {
+        background-image: linear-gradient(to bottom right, rgba($orange-light, 0.85), rgba($orange-dark, 0.85));
+      }
+    }
+  }
+  .card__description {
+    padding: 1.875rem;
+    ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+      li {
+        text-align: center;
+        font-size: 0.9375rem;
+        padding: 1rem;
+        &:not(:last-child) {
+          border-bottom: 1px solid #eee;
+        }
+      }
     }
   }
 }
