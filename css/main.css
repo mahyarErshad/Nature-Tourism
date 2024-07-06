@@ -121,6 +121,14 @@ body {
   content: "";
   background-color: #fff;
 }
+.btn-green {
+  background-color: #28b485;
+  color: #fff;
+}
+.btn-green::after {
+  content: "";
+  background-color: #28b485;
+}
 .btn-moveBottom {
   animation: moveToBottom 0.3s ease-out 0.7s;
   animation-fill-mode: backwards;
@@ -271,7 +279,6 @@ body {
 }
 
 .features_box {
-  max-width: 25%;
   background-color: rgba(255, 255, 255, 0.8);
   font-size: 0.9375rem;
   padding: 1.5625rem;
@@ -301,14 +308,15 @@ body {
 
 .section-tours {
   background-color: #f7f7f7;
-  padding: 15.625rem 0;
+  padding: 15rem 0 4rem 0;
   margin-top: -6.25rem;
 }
 .section-tours_wrapper {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
-  gap: 1.25rem;
+  gap: 2rem;
+  margin-bottom: 6.25rem;
 }
 
 .card {
@@ -339,6 +347,12 @@ body {
 .card__side--back-orange {
   background-image: linear-gradient(to bottom right, #ffb900, #ff7730);
 }
+.card__side--back-green {
+  background-image: linear-gradient(to bottom right, #7ed56f, #28b485);
+}
+.card__side--back-blue {
+  background-image: linear-gradient(to bottom right, #2998ff, #5643fa);
+}
 .card:hover .card__side--front {
   transform: rotateY(-180deg);
 }
@@ -360,9 +374,17 @@ body {
   height: 14.375rem;
   background-blend-mode: screen;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
 }
 .card__side--front .card__image-1 {
   background-image: url(/img/nat-5.jpg), linear-gradient(to bottom right, #ffb900, #ff7730);
+}
+.card__side--front .card__image-2 {
+  background-image: url(/img/nat-6.jpg), linear-gradient(to bottom right, #7ed56f, #28b485);
+}
+.card__side--front .card__image-3 {
+  background-image: url(/img/nat-7.jpg), linear-gradient(to bottom right, #2998ff, #5643fa);
 }
 .card__side--front .card__title {
   font-size: 1.75rem;
@@ -373,7 +395,7 @@ body {
   position: absolute;
   top: 7.5rem;
   right: 1.25rem;
-  width: 75%;
+  max-width: 60%;
   text-transform: capitalize;
 }
 .card__side--front .card__title-span {
@@ -383,6 +405,12 @@ body {
 }
 .card__side--front .card__title-span--1 {
   background-image: linear-gradient(to bottom right, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85));
+}
+.card__side--front .card__title-span--2 {
+  background-image: linear-gradient(to bottom right, rgba(126, 213, 111, 0.85), rgba(40, 180, 133, 0.85));
+}
+.card__side--front .card__title-span--3 {
+  background-image: linear-gradient(to bottom right, rgba(41, 152, 255, 0.85), rgba(86, 67, 250, 0.85));
 }
 .card__side--front .card__description {
   padding: 1.875rem;
