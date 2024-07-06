@@ -401,4 +401,28 @@ body {
   border-bottom: 1px solid #eee;
 }
 
+.card__cta {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5625rem;
+}
+.card__cta .card__pric-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0;
+  color: #fff;
+}
+.card__cta .card__pric-box .card__price-only {
+  text-transform: uppercase;
+}
+.card__cta .card__pric-box .card__price-value {
+  font-weight: 300;
+  font-size: 3.75rem;
+}
+
 /*# sourceMappingURL=main.css.map */
