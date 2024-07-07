@@ -456,7 +456,6 @@ body {
 .stories {
   padding: 9.375rem 0;
   background-color: #f7f7f7;
-  gap: 2rem;
 }
 .stories .story {
   width: 75%;
@@ -475,17 +474,43 @@ body {
   width: 9.375rem;
   height: 9.375rem;
   float: left;
-  background-color: red;
   -webkit-shape-outside: circle(50% at 50% 50%);
   shape-outside: circle(50% at 50% 50%);
   clip-path: circle(50% at 50% 50%);
   transform: translateX(-1.875rem) skewX(12deg);
+  position: relative;
 }
-.stories .story_shape img {
+.stories .story_shape .story_img {
   height: 100%;
+  transform: translateX(-2.5rem) scale(1.4);
+  transition: all 0.3s;
+}
+.stories .story_shape .story_name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 10%);
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.0625rem;
+  text-align: center;
+  opacity: 0;
+  transition: all 0.3s;
 }
 .stories .story_text {
   transform: skewX(12deg);
+}
+.stories .story:hover .story_name {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+.stories .story:hover .story_img {
+  opacity: 1;
+  transform: translateX(-2.5rem) scale(1);
+  filter: blur(3px) brightness(80%);
+}
+.stories .story:not(:last-child) {
+  margin-bottom: 4.375rem;
 }
 
 /*# sourceMappingURL=main.css.map */

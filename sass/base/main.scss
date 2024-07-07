@@ -10,7 +10,6 @@
 .stories {
   padding: 9.375rem 0;
   background-color: $light-gray;
-  gap: 2rem;
 
   .story {
     width: 75%;
@@ -32,17 +31,43 @@
       width: 9.375rem;
       height: 9.375rem;
       float: left;
-      background-color: red;
       -webkit-shape-outside: circle(50% at 50% 50%);
       shape-outside: circle(50% at 50% 50%);
       clip-path: circle(50% at 50% 50%);
       transform: translateX(-1.875rem) skewX(12deg);
-      img {
+      position: relative;
+      .story_img {
         height: 100%;
+        transform: translateX(-2.5rem) scale(1.4);
+        transition: all 0.3s;
+      }
+      .story_name {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 10%);
+        color: $white;
+        text-transform: uppercase;
+        font-size: 1.0625rem;
+        text-align: center;
+        opacity: 0;
+        transition: all 0.3s;
       }
     }
     &_text {
       transform: skewX(12deg);
+    }
+    &:hover .story_name {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+    &:hover .story_img {
+      opacity: 1;
+      transform: translateX(-2.5rem) scale(1);
+      filter: blur(3px) brightness(80%);
+    }
+    &:not(:last-child) {
+      margin-bottom: 4.375rem;
     }
   }
 }
