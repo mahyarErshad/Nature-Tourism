@@ -453,4 +453,39 @@ body {
   font-size: 3.75rem;
 }
 
+.stories {
+  padding: 9.375rem 0;
+  background-color: #f7f7f7;
+  gap: 2rem;
+}
+.stories .story {
+  width: 75%;
+  box-shadow: 0 1.875rem 3.75rem rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 3.75rem;
+  padding-left: 5.625rem;
+  transform: skewX(-12deg);
+}
+.stories .story .story_text h3 {
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+.stories .story_shape {
+  width: 9.375rem;
+  height: 9.375rem;
+  float: left;
+  background-color: red;
+  -webkit-shape-outside: circle(50% at 50% 50%);
+  shape-outside: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);
+  transform: translateX(-1.875rem) skewX(12deg);
+}
+.stories .story_shape img {
+  height: 100%;
+}
+.stories .story_text {
+  transform: skewX(12deg);
+}
+
 /*# sourceMappingURL=main.css.map */

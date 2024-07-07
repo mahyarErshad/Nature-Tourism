@@ -6,3 +6,43 @@
 @import "../components/about.scss";
 @import "../components/features.scss";
 @import "../components/tours.scss";
+
+.stories {
+  padding: 9.375rem 0;
+  background-color: $light-gray;
+  gap: 2rem;
+
+  .story {
+    width: 75%;
+    box-shadow: 0 1.875rem 3.75rem rgba($black, 0.1);
+    background-color: $white;
+    border-radius: 3px;
+    padding: 3.75rem;
+    padding-left: 5.625rem;
+    transform: skewX(-12deg);
+
+    .story_text {
+      h3 {
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    &_shape {
+      width: 9.375rem;
+      height: 9.375rem;
+      float: left;
+      background-color: red;
+      -webkit-shape-outside: circle(50% at 50% 50%);
+      shape-outside: circle(50% at 50% 50%);
+      clip-path: circle(50% at 50% 50%);
+      transform: translateX(-1.875rem) skewX(12deg);
+      img {
+        height: 100%;
+      }
+    }
+    &_text {
+      transform: skewX(12deg);
+    }
+  }
+}
