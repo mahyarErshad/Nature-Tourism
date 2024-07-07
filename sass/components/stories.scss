@@ -1,0 +1,80 @@
+.stories {
+  padding: 9.375rem 0;
+  position: relative;
+
+  .story {
+    width: 75%;
+    box-shadow: 0 1.875rem 3.75rem rgba($black, 0.1);
+    background-color: rgba($white, 0.6);
+    border-radius: 3px;
+    padding: 3.75rem;
+    padding-left: 5.625rem;
+    transform: skewX(-12deg);
+
+    .story_text {
+      h3 {
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    &_shape {
+      width: 9.375rem;
+      height: 9.375rem;
+      float: left;
+      -webkit-shape-outside: circle(50% at 50% 50%);
+      shape-outside: circle(50% at 50% 50%);
+      clip-path: circle(50% at 50% 50%);
+      transform: translateX(-1.875rem) skewX(12deg);
+      position: relative;
+      .story_img {
+        height: 100%;
+        transform: translateX(-2.5rem) scale(1.4);
+        transition: all 0.3s;
+      }
+      .story_name {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 10%);
+        color: $white;
+        text-transform: uppercase;
+        font-size: 1.0625rem;
+        text-align: center;
+        opacity: 0;
+        transition: all 0.3s;
+      }
+    }
+    &_text {
+      transform: skewX(12deg);
+    }
+    &:hover .story_name {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+    &:hover .story_img {
+      opacity: 1;
+      transform: translateX(-2.5rem) scale(1);
+      filter: blur(3px) brightness(80%);
+    }
+    &:not(:last-child) {
+      margin-bottom: 4.375rem;
+    }
+  }
+}
+
+.bg_video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.15;
+  overflow: hidden;
+  &--content {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
