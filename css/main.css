@@ -455,12 +455,12 @@ body {
 
 .stories {
   padding: 9.375rem 0;
-  background-color: #f7f7f7;
+  position: relative;
 }
 .stories .story {
   width: 75%;
   box-shadow: 0 1.875rem 3.75rem rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.6);
   border-radius: 3px;
   padding: 3.75rem;
   padding-left: 5.625rem;
@@ -511,6 +511,22 @@ body {
 }
 .stories .story:not(:last-child) {
   margin-bottom: 4.375rem;
+}
+
+.bg_video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.15;
+  overflow: hidden;
+}
+.bg_video--content {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=main.css.map */
