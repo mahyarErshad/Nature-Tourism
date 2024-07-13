@@ -37,6 +37,11 @@
       &:not(:last-child) {
         margin-bottom: 1.25rem;
       }
+      &-radio {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        transform: translateX(-2rem);
+      }
     }
 
     &__input {
@@ -73,11 +78,55 @@
       transition: all 0.3s;
       display: block;
     }
-  }
-}
+    &__radio-group {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+    &__radio-label {
+      font-size: 1rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    &__radio-button {
+      height: 30px;
+      width: 30px;
+      border: 5px solid $dark;
+      border-radius: 50%;
+      display: inline-block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &::after {
+        content: "";
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        background-color: $dark;
+        opacity: 0;
+        transition: all 0.3s;
+      }
+    }
+    &__input:placeholder-shown + .form__label {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-2.5rem);
+    }
 
-.form__input:placeholder-shown + .form__label {
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-2.5rem);
+    &__radio-input:checked ~ .form__radio-label .form__radio-button::after {
+      opacity: 1;
+    }
+
+    &__radio-input {
+      display: none;
+    }
+
+    &__btn {
+      margin-top: 1rem;
+    }
+  }
 }
