@@ -23,7 +23,9 @@
         opacity: 0;
       }
     }
-    &:active {
+    &:active,
+    &:focus {
+      outline: none;
       transform: translateY(0.0625rem);
       box-shadow: 0 0.3125rem 0.625rem rgba($black, 0.2);
     }
