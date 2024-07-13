@@ -529,4 +529,21 @@ body {
   object-fit: cover;
 }
 
+.booking {
+  padding: 9.375rem 0;
+  background-image: linear-gradient(to bottom right, #7ed56f, #28b485);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.book {
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(/img/nat-10.jpg);
+  width: 75%;
+  height: 31.25rem;
+  background-size: cover;
+  border-radius: 3px;
+  box-shadow: 0 0.9375rem 40px rgba(0, 0, 0, 0.15);
+}
+
 /*# sourceMappingURL=main.css.map */

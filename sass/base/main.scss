@@ -7,3 +7,19 @@
 @import "../components/features.scss";
 @import "../components/tours.scss";
 @import "../components/stories.scss";
+
+.booking {
+  padding: 9.375rem 0;
+  background-image: linear-gradient(to bottom right, $light, $dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.book {
+  background-image: linear-gradient(105deg, rgba($white, 0.9) 0%, rgba($white, 0.9) 50%, transparent 50%), url(/img/nat-10.jpg);
+  width: 75%;
+  height: 31.25rem;
+  background-size: cover;
+  border-radius: 3px;
+  box-shadow: 0 0.9375rem 40px rgba($black, 0.15);
+}
