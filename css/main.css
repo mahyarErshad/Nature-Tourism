@@ -550,5 +550,46 @@ body {
 .book .form {
   padding: 3.75rem;
 }
+.book .form .title {
+  margin-bottom: 2.5rem;
+}
+.book .form__group:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+.book .form__input {
+  font-size: 0.9375rem;
+  font-family: inherit;
+  padding: 0.9375rem 1.25rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-radius: 2px;
+  border-bottom: 3px solid transparent;
+  width: 90%;
+}
+.book .form__input:focus {
+  outline: none;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-bottom: 3px solid #28b485;
+}
+.book .form__input:focus:invalid {
+  border-bottom: 3px solid #ff7730;
+}
+.book .form__input::-webkit-input-placeholder {
+  color: #999;
+}
+.book .form__label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-left: 1.25rem;
+  margin-top: 0.4375rem;
+  transition: all 0.3s;
+  display: block;
+}
+
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-2.5rem);
+}
 
 /*# sourceMappingURL=main.css.map */
