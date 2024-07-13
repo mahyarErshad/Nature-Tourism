@@ -22,4 +22,9 @@
   background-size: cover;
   border-radius: 3px;
   box-shadow: 0 0.9375rem 40px rgba($black, 0.15);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  .form{
+    padding: 3.75rem;
+  }
 }

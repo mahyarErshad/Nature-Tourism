@@ -544,6 +544,11 @@ body {
   background-size: cover;
   border-radius: 3px;
   box-shadow: 0 0.9375rem 40px rgba(0, 0, 0, 0.15);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.book .form {
+  padding: 3.75rem;
 }
 
 /*# sourceMappingURL=main.css.map */
