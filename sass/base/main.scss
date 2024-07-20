@@ -9,3 +9,75 @@
 @import "../components/stories.scss";
 @import "../components/booking.scss";
 @import "../components/footer.scss";
+
+.navigation {
+  &__checbox {
+    display: none;
+  }
+
+  &__button {
+    background-color: $white;
+    height: 70px;
+    width: 70px;
+    position: fixed;
+    top: 60px;
+    right: 60px;
+    border-radius: 50%;
+    z-index: 1002;
+  }
+
+  &__background {
+    height: 3.75rem;
+    width: 3.75rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 4.0625rem;
+    right: 4.0625rem;
+    background-image: radial-gradient($light, $dark);
+    z-index: 1000;
+    transform: scale(80);
+  }
+
+  &__nav {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1001;
+  }
+
+  &__list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
+  }
+
+  &__item {
+    margin: 0.625rem;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      display: inline-block;
+      color: $white;
+      font-size: 1.875rem;
+      padding: 0.625rem 1.25rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $white 50%);
+      background-size: 230%;
+      transition: all 0.3s;
+    }
+    &:hover,
+    &:active {
+      background-position: 100%;
+      color: $dark;
+      transform: translateX(0.625rem);
+    }
+  }
+}
