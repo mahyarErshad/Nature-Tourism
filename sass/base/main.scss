@@ -13,17 +13,27 @@
 .navigation {
   &__checbox {
     display: none;
+
+    &:checked ~ .navigation__background {
+      transform: scale(80);
+    }
+    &:checked ~ .navigation__nav {
+      width: 100%;
+      opacity: 1;
+    }
   }
 
   &__button {
     background-color: $white;
-    height: 70px;
-    width: 70px;
+    height: 4.375rem;
+    width: 4.375rem;
     position: fixed;
-    top: 60px;
-    right: 60px;
+    top: 3.75rem;
+    right: 3.75rem;
     border-radius: 50%;
     z-index: 1002;
+    box-shadow: 0 0.625rem 1.875rem rgba($black, 0.1);
+    cursor: pointer;
   }
 
   &__background {
@@ -35,16 +45,18 @@
     right: 4.0625rem;
     background-image: radial-gradient($light, $dark);
     z-index: 1000;
-    transform: scale(80);
+    transition: all 0.5s cubic-bezier(0.86, 0, 0.07, 1);
   }
 
   &__nav {
     height: 100vh;
-    width: 100%;
     position: fixed;
     top: 0;
     right: 0;
     z-index: 1001;
+    opacity: 0;
+    width: 0;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 
   &__list {
