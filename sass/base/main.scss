@@ -130,12 +130,12 @@
   }
 
   &__checkbox:checked + .navigation__button .navigation__icon::after {
-    transform: rotate(-45deg);
+    transform: rotate(-135deg);
     top: 0;
   }
 
   &__checkbox:checked + .navigation__button .navigation__icon::before {
-    transform: rotate(45deg);
+    transform: rotate(135deg);
     top: 0;
   }
 }
