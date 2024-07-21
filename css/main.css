@@ -721,6 +721,7 @@ body {
   z-index: 1002;
   box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  text-align: center;
 }
 .navigation__background {
   height: 3.75rem;
@@ -769,6 +770,45 @@ body {
   background-position: 100%;
   color: #28b485;
   transform: translateX(0.625rem);
+}
+.navigation__icon {
+  position: relative;
+  margin-top: 2.1875rem;
+}
+.navigation__icon, .navigation__icon::after, .navigation__icon::before {
+  background-color: #333;
+  width: 1.875rem;
+  height: 2px;
+  display: inline-block;
+  left: 0;
+  transition: all 0.3s;
+}
+.navigation__icon::after, .navigation__icon::before {
+  content: "";
+  position: absolute;
+}
+.navigation__icon::before {
+  top: -0.5rem;
+}
+.navigation__icon::after {
+  top: 0.5rem;
+}
+.navigation__button:hover .navigation__icon::before {
+  transform: translateY(-0.125rem);
+}
+.navigation__button:hover .navigation__icon::after {
+  transform: translateY(0.125rem);
+}
+.navigation__checbox:checked + .navigation__button .navigation__icon {
+  background-color: transparent;
+}
+.navigation__checbox:checked + .navigation__button .navigation__icon::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+.navigation__checbox:checked + .navigation__button .navigation__icon::before {
+  transform: rotate(45deg);
+  top: 0;
 }
 
 /*# sourceMappingURL=main.css.map */
