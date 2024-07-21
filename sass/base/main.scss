@@ -11,7 +11,7 @@
 @import "../components/footer.scss";
 
 .navigation {
-  &__checbox {
+  &__checkbox {
     display: none;
 
     &:checked ~ .navigation__background {
@@ -125,16 +125,16 @@
     transform: translateY(0.125rem);
   }
 
-  &__checbox:checked + .navigation__button .navigation__icon {
+  &__checkbox:checked + .navigation__button .navigation__icon {
     background-color: transparent;
   }
 
-  &__checbox:checked + .navigation__button .navigation__icon::after {
+  &__checkbox:checked + .navigation__button .navigation__icon::after {
     transform: rotate(-45deg);
     top: 0;
   }
 
-  &__checbox:checked + .navigation__button .navigation__icon::before {
+  &__checkbox:checked + .navigation__button .navigation__icon::before {
     transform: rotate(45deg);
     top: 0;
   }
