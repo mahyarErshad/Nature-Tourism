@@ -811,4 +811,49 @@ body {
   top: 0;
 }
 
+.popup {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.popup__content {
+  width: 75%;
+  background-color: #fff;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  display: grid;
+  grid-template-columns: 33.3fr 66.7fr;
+  align-items: center;
+  overflow: hidden;
+}
+.popup__right {
+  padding: 1.875rem 3.125rem;
+}
+.popup__right .title {
+  margin-bottom: 1rem;
+}
+.popup__right .btn {
+  display: inline-block;
+  margin-top: 2.5rem;
+}
+.popup__img {
+  display: block;
+  width: 100%;
+}
+.popup__text {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  column-count: 2;
+  column-gap: 2.5rem;
+  column-rule: 1px solid #eee;
+  hyphens: auto;
+}
+.popup .heading-tertiary {
+  text-transform: uppercase;
+}
+
 /*# sourceMappingURL=main.css.map */
