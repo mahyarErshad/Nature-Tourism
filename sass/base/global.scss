@@ -30,6 +30,10 @@ body {
   font-weight: 400;
   color: $gray;
   padding: 1.875rem;
+
+  @include respond(tablet) {
+    padding: 0;
+  }
 }
 
 // Util Classes
@@ -54,9 +58,14 @@ body {
   color: transparent;
   transition: all 0.2s;
   letter-spacing: 0.125rem;
+  text-align: center;
   &:hover {
     transform: skewX(15deg) skewY(2deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba($black, 0.2);
   }
   margin-bottom: 5rem;
+
+  @include respond(phone) {
+    font-size: 2rem;
+  }
 }

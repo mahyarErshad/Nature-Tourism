@@ -23,6 +23,11 @@
       font-weight: 500;
       letter-spacing: 2.1875rem;
       animation: moveRight 0.5s ease-out;
+      text-align: center;
+
+      @include respond(phone) {
+        letter-spacing: 0.625rem;
+      }
     }
     h2 {
       font-size: 1.25rem;
@@ -30,6 +35,11 @@
       font-weight: 700;
       backface-visibility: hidden;
       animation: moveLeft 0.5s ease-out;
+      text-align: center;
+
+      @include respond(phone) {
+        letter-spacing: 0.3125rem;
+      }
     }
     .btn {
       transform: translateY(3.75rem);
